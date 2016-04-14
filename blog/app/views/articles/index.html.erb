@@ -1,12 +1,18 @@
-<h1>Listing articles</h1>
+<%= stylesheet_link_tag "styles.css" %>
 
-<%= link_to 'New article', new_article_path %>
+<button type="button"><%= link_to 'Homepage', controller: 'welcome' %></button>
+<button type="button"><%= link_to 'New article', new_article_path %></button>
+<button type="button"><%= link_to 'Learn more about me', controller: 'about' %></button>
+
+<h1>Listing articles</h1>
  
 <table>
   <tr>
     <th>Title</th>
     <th>Text</th>
-    <th colspan="2"></th>
+    <th>Show</th>
+    <th>Edit</th>
+    <th>Destroy</th>
   </tr>
  
   <% @articles.each do |article| %>
